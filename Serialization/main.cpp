@@ -7,19 +7,20 @@
 
 #include <iostream>
 #include <fstream>
-#include "Feature.hpp"
+#include "Smartphone.hpp"
+
 
 using namespace std;
 
 void readFromFile() {
-    char buffer[Feature::BUFFER_SIZE];
+    char buffer[Smartphone::BUFFER_SIZE];
     ifstream readStream;
     readStream.open("data.dat", ios::binary);
-    readStream.read(buffer, Feature::BUFFER_SIZE);
+    readStream.read(buffer, Smartphone::BUFFER_SIZE);
     
-    Feature ft = Feature::unserialize(buffer);
-    cout << "Nombre: " << ft.getName() << endl;
-    cout << "Valor: " << ft.getValue() << endl;
+    Smartphone sf = Smartphone::unserialize(buffer);
+    cout << "Nombre: " << sf.getName() << endl;
+    cout << "Id: " << sf.getId() << endl;
     readStream.close();
 }
 
@@ -34,16 +35,21 @@ void writeToFile(char buffer[], unsigned int bufferSize) {
 using namespace std;
 int main(int argc, const char * argv[]) {
     // insert code here...
-    char name[Feature::NAME_SIZE];
+    char name[Smartphone::NAME_SIZE];
     
-    cout << "Insert feature name: ";
+    cout << "Insert smartphone name: ";
     cin >> name;
-    Feature feature(name, true);
-    char buffer[Feature::BUFFER_SIZE];
-    memcpy(buffer, feature.serialize(), Feature::BUFFER_SIZE);
-    writeToFile(buffer, Feature::BUFFER_SIZE);
     
-    readFromFile();
+    Smartphone sf(45, name);
+    sf.printFirstFeature();
+    
+    char buffer[Smartphone::BUFFER_SIZE];
+    memcpy(buffer, sf.serialize(), Smartphone::BUFFER_SIZE);
+    
+    Smartphone sf2 = Smartphone::unserialize(buffer);
+    cout << "Nombre: " << sf2.getName() << endl;
+    cout << "Id: " << sf2.getId() << endl;
+    sf2.printFirstFeature();
     
     cin.get();
     

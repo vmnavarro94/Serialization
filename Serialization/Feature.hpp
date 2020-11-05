@@ -8,8 +8,9 @@
 #ifndef Feature_hpp
 #define Feature_hpp
 
-#include <stdio.h>
+#include <string>
 
+using namespace std;
 class Feature {
 public:
     Feature(char[], bool);
@@ -17,9 +18,7 @@ public:
     void setFeature(char[], bool);
     char* getName();
     bool getValue();
-    
-    char* serialize();
-    static Feature unserialize(char[]);
+
     static const unsigned int NAME_SIZE = 50;
 private:
     char name[NAME_SIZE];
