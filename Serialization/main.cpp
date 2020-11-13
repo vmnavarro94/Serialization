@@ -7,8 +7,10 @@
 
 #include <iostream>
 #include <fstream>
-#include "Smartphone.hpp"
+#include <vector>
 
+#include "Smartphone.hpp"
+#include "File.hpp"
 
 using namespace std;
 
@@ -33,25 +35,46 @@ void writeToFile(char buffer[], unsigned int bufferSize) {
 }
 
 using namespace std;
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    char name[Smartphone::NAME_SIZE];
+    int opcion = 0;
+    File<Smartphone> file("data.dat");
+    Smartphone smartphone;
+    vector<Smartphone> smarthphones;
     
-    cout << "Insert smartphone name: ";
-    cin >> name;
-    
-    Smartphone sf(45, name);
-    sf.printFirstFeature();
-    
-    char buffer[Smartphone::BUFFER_SIZE];
-    memcpy(buffer, sf.serialize(), Smartphone::BUFFER_SIZE);
-    
-    Smartphone sf2 = Smartphone::unserialize(buffer);
-    cout << "Nombre: " << sf2.getName() << endl;
-    cout << "Id: " << sf2.getId() << endl;
-    sf2.printFirstFeature();
-    
-    cin.get();
+    do {
+        cout << "Bienvenido al sistema" << endl;
+        cout << "Ingrese una opcion" << endl << endl;
+        cout << "1.- Insertar al final" << endl;
+        cout << "2.- Insertar al inicio" << endl;
+        cout << "3.- Eliminar (por id)" << endl;
+        cout << "4.- Mostrar (por id)" << endl;
+        cout << "5.- Modificar (por id)" << endl;
+        cout << "6.- Mostrar todos" << endl;
+        cout << "7.- Salir" << endl << endl;
+        
+        cin >> opcion;
+        
+        switch(opcion) {
+            case 1:
+                smartphone = Smartphone::captureSmartphone();
+                file.insertEnd(smartphone);
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            default:
+                break;
+        }
+        
+    } while(opcion != 7);
     
     return 0;
 }

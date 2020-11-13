@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "55521A7C-8402-4E9E-B886-A64D4951F5F2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Serialization/main.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "main(argc, argv)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "1E2E6B01-EFD3-4879-8BC0-E338C707D482"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -39,22 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2610EB6E-A0DF-4B2B-92CF-F485BEC7346E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Serialization/Smartphone.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "Smartphone::Smartphone()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "9DD248F5-7FF2-4559-B113-41257C6AED7D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -62,13 +30,13 @@
             filePath = "Serialization/Smartphone.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "Smartphone::Smartphone()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "9DD248F5-7FF2-4559-B113-41257C6AED7D - e6779b390c3bee95"
+                  uuid = "9DD248F5-7FF2-4559-B113-41257C6AED7D - e6779b390c3bec58"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -78,12 +46,12 @@
                   urlString = "file:///Users/vnavarro/workspace/Serialization/Serialization/Smartphone.cpp"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "1238">
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "93">
                </Location>
                <Location
-                  uuid = "9DD248F5-7FF2-4559-B113-41257C6AED7D - e6779b390c3bee95"
+                  uuid = "9DD248F5-7FF2-4559-B113-41257C6AED7D - e6779b390c3bec58"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -93,8 +61,8 @@
                   urlString = "file:///Users/vnavarro/workspace/Serialization/Serialization/Smartphone.cpp"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
                   offsetFromSymbolStart = "21">
                </Location>
             </Locations>

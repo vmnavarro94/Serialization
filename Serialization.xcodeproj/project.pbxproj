@@ -27,6 +27,7 @@
 /* Begin PBXFileReference section */
 		2865EF412553B05B009A7B7E /* Smartphone.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Smartphone.cpp; sourceTree = "<group>"; };
 		2865EF422553B05B009A7B7E /* Smartphone.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Smartphone.hpp; sourceTree = "<group>"; };
+		28692AE3255CCED800D247FC /* File.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = File.hpp; sourceTree = "<group>"; };
 		28BB4DE525538C24007A394C /* Serialization */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Serialization; sourceTree = BUILT_PRODUCTS_DIR; };
 		28BB4DE825538C24007A394C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		28BB4DF025538C9B007A394C /* Feature.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Feature.cpp; sourceTree = "<group>"; };
@@ -68,6 +69,7 @@
 				28BB4DF125538C9B007A394C /* Feature.hpp */,
 				2865EF412553B05B009A7B7E /* Smartphone.cpp */,
 				2865EF422553B05B009A7B7E /* Smartphone.hpp */,
+				28692AE3255CCED800D247FC /* File.hpp */,
 			);
 			path = Serialization;
 			sourceTree = "<group>";

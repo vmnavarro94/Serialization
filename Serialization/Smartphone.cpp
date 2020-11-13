@@ -13,40 +13,33 @@
 using namespace std;
 
 Smartphone::Smartphone() {
-    srand(time_t(0));
-    char feature[50];
-    strcpy(feature, "camara-fronta");
-    features[0].setFeature(feature, rand() % 3);
-    strcpy(feature, "camara-lateral");
-    features[1].setFeature(feature, rand() % 3);
-    strcpy(feature, "5g");
-    features[2].setFeature(feature, rand() % 3);
-    strcpy(feature, "teclado-fisico");
-    features[3].setFeature(feature, rand() % 3);
-    strcpy(feature, "lector-huella");
-    features[4].setFeature(feature, rand() % 3);
-    strcpy(feature, "reconociemiento-facial");
-    features[5].setFeature(feature, rand() % 3);
-    strcpy(feature, "gps");
-    features[6].setFeature(feature, rand() % 3);
-    strcpy(feature, "wifi");
-    features[7].setFeature(feature, rand() % 3);
-    strcpy(feature, "bluetooth");
-    features[8].setFeature(feature, rand() % 3);
-    strcpy(feature, "audio-jack");
-    features[9].setFeature(feature, rand() % 3);
+    initFeatures();
 }
 
 Smartphone::Smartphone(unsigned short id, char name[]) {
+    initFeatures();
     setId(id);
     setName(name);
-    Smartphone();
 }
 
 Smartphone::Smartphone(unsigned short id, char name[], Feature features[]) {
     setId(id);
     setName(name);
     memcpy(this->features, features, Feature::BUFFER_SIZE * 10);
+}
+
+void Smartphone::initFeatures() {
+    srand(time_t(0));
+    features[0].setFeature("camara-frontal", rand() % 3);
+    features[1].setFeature("camara-lateral", rand() % 3);
+    features[2].setFeature("5g", rand() % 3);
+    features[3].setFeature("teclado-fisico", rand() % 3);
+    features[4].setFeature("lector-huella", rand() % 3);
+    features[5].setFeature("reconociemiento-facial", rand() % 3);
+    features[6].setFeature("gps", rand() % 3);
+    features[7].setFeature("wifi", rand() % 3);
+    features[8].setFeature("bluetooth", rand() % 3);
+    features[9].setFeature("audio-jack", rand() % 3);
 }
 
 void Smartphone::setId(unsigned short id) {
@@ -98,4 +91,17 @@ Smartphone Smartphone::unserialize(char buffer[]) {
 
 void Smartphone::printFirstFeature() {
     cout << "First Feature: " << features[0].getName() << endl;
+}
+
+Smartphone Smartphone::captureSmartphone() {
+    char nombre[Smartphone::NAME_SIZE];
+    int id;
+    
+    cout << "Ingrese el nombre del smartphone: ";
+    cin >> nombre;
+    cout << "Ingrese el id: ";
+    cin >> id;
+    
+    Smartphone sp(id, nombre);
+    return sp;
 }
